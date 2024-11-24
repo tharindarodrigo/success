@@ -5,12 +5,14 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use LaraZeus\Bolt\Models\Concerns\BelongToBolt;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     use HasRoles;
     use Notifiable;
+    use BelongToBolt;
 
     /**
      * The attributes that are mass assignable.
